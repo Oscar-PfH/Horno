@@ -7,11 +7,11 @@ Para el presente proyecto se ha hecho uso del framework Electron.js para crear u
 
 ## Obteniendo el framework
 Ejecutar los siguientes comandos en el cmd o terminal\\
-Crear un 'package.json'
+* Crear un 'package.json'
 > npm init --yes
-Instalar el framework
+* Instalar el framework
 > npm i electron
-Asi mismo, se hizo uso de la extensión 'electron-reload'
+* Asi mismo, se hizo uso de la extensión 'electron-reload'
 > npm i electron-reload
 
 Encuentre la documentación aquí
