@@ -1,0 +1,26 @@
+{
+  "name": "Horno",
+  "version": "1.0.0",
+  "description": "Administración y control de asaderas",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oscar-PfH/Horno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oscar-PfH/Horno/issues"
+  },
+  "homepage": "https://github.com/Oscar-PfH/Horno#readme",
+  "dependencies": {
+    "electron": "^11.1.1",
+    "electron-reload": "^1.5.0",
+    "mysql": "^2.18.1",
+    "promise-mysql": "^5.0.2"
+  }
+}
