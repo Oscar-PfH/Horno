@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agregar asaderas</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <script src="../setAsaderas.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="container-fluid">
+        <h1 id="title">Formulario para asaderas</h1>
+        </header>
+        <form class="p-4" role="form" id="asaderasForm">
+            <div class="form-group">
+                <label for="inputClient">Cliente</label>
+                <select name="inputClient" class="form-control" id="inputClient"></select>
+            </div>
+            <div class="form-group">
+                <label for="inputContent">Contenido</label>
+                <input type="text" class="form-control" id="inputContent" placeholder="Contenido de la asadera"/>
+                <p id="msg-error1" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputDesc">Descripción</label>
+                <input type="text" class="form-control" id="inputDesc" placeholder="Descripción de la asadera"/>
+                <p id="msg-error2" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputTime">Hora de ingreso</label>
+                <input type="time" class="form-control" id="inputTime"/>
+                <p id="msg-error4" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputOven">Horno</label>
+                <select name="inputOven" class="form-control" id="inputOven">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputStatus">Estado</label>
+                <select name="inputStatus" class="form-control" id="inputStatus">
+                    <option value="1">En espera</option>
+                    <option value="2">En horno</option>
+                    <option value="3">Listo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary submitBtn">Guardar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

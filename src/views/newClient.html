@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agregar cliente</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <script src="../app.js"></script>
+</head>
+<body onload="init()">
+    <div class="container">
+        <header class="container-fluid">
+        <h1 id="title">Formulario para clientes</h1>
+        </header>
+        <form class="p-4" role="form" id="clientForm">
+            <div class="form-group">
+                <label for="inputName">Nombre(s)</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Nombre del cliente"/>
+                <p id="msg-error1" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputLastname">Apellidos</label>
+                <input type="text" class="form-control" id="inputLastname" placeholder="Apellidos del cliente"/>
+                <p id="msg-error2" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputPhone">Teléfono</label>
+                <input type="number" class="form-control" id="inputPhone" min="900000000" max="999999999" minlength="9" maxlength="9" placeholder="Teléfono del cliente"/>
+                <p id="msg-error3" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputTime">Hora de llegada</label>
+                <input type="time" class="form-control" id="inputTime"/>
+                <p id="msg-error4" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputPrice">Precio</label>
+                <input type="number" class="form-control" id="inputPrice" min="0.5" max="999.5" step="0.5" placeholder="#"/>
+                <p id="msg-error5" class="msg-error"></p>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary submitBtn">Guardar</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+
+</html>

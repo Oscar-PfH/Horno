@@ -10,8 +10,11 @@
     <title>Administrador de Hornos</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    
+    <link rel="stylesheet" href="../css/app.css">
+
+    <!-- Latest minified bootstrap js -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
 </head>
 <body>
@@ -27,37 +30,19 @@
             </ul>
         </nav>
         <p>Buscar cliente:</p>
-        <form class="form-inline" action="/action_page.php">
+        <form class="form-inline" action="">
             <input class="form-control mr-sm-2 pl-1 ml-1" type="text" placeholder="Nombre del cliente">
             <button class="btn btn-success btn-sm" type="submit">Buscar</button>
         </form>
-        <button type="button" id="addClient" class="mr-sm-2" onclick="addClient()">Agregar cliente</button>
+        <button type="button" id="addClientButton" class="mr-sm-2" onclick="displayNewClientWindow()">Agregar cliente</button>
+        <button type="button" id="addAsaderaButton" class="mr-sm-2" onclick="displayNewAsaderaWindow()">Agregar asadera</button>
     </div>
     <div id="content">
         <table id="tableData" class="table table-dark table-hover">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Cliente</th>
-                    <th>Teléfono</th>
-                    <th>Hora llegada</th>
-                    <th>Cantidad de asaderas</th>
-                    <th>Deuda</th>
-                    <th>Estado de entrega</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody class="tbody" id="clients"></tbody>
         </table>
     </div>
 </div>
-<script>
-    const {ipcRenderer} = require('electron');
-
-    ipcRenderer.on('client:new', (e, newClient) => {
-        console.log(newClient);
-    })
-</script>
 <script src="../nav.js"></script>
+<script type="text/javascript" src="../content.js"></script>
 </body>
 </html>

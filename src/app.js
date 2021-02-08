@@ -21,8 +21,7 @@ function init() {
             deuda: price.value,
             estado: 0
         };
-        console.log(newClient);
         main.addClient(newClient);
-        ipcRenderer.send('client:new', newClient);
-    })
+        // ipcRenderer.send('asaderas:amount', amount);
+    });
 }
