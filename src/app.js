@@ -11,6 +11,8 @@ function init() {
     const time = document.getElementById('inputTime');
     const price = document.getElementById('inputPrice');
 
+    showTime();
+
     clientForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const newClient = {
@@ -19,9 +21,18 @@ function init() {
             telefono: phone.value,
             hora_llegada: time.value,
             deuda: price.value,
-            estado: 0
+            estado: 1
         };
         main.addClient(newClient);
         // ipcRenderer.send('asaderas:amount', amount);
     });
+}
+
+function showTime() {
+    myDate = new Date();
+    hours = myDate.getHours();
+    minutes = myDate.getMinutes();
+    if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
+    document.getElementById('inputTime').setAttribute('value', hours + ":" + minutes);
 }

@@ -32,6 +32,8 @@ async function initnewa() {
     const clients = await main.getClients();
     renderClientsList(clients);
 
+    showTime();
+
     const asaderasForm = document.getElementById('asaderasForm');
 
     const clientId = document.getElementById('inputClient');
@@ -56,6 +58,15 @@ async function initnewa() {
         asaderasForm.reset();
         content.focus();
     });
+}
+
+function showTime() {
+    myDate = new Date();
+    hours = myDate.getHours();
+    minutes = myDate.getMinutes();
+    if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
+    document.getElementById('inputTime').setAttribute('value', hours + ":" + minutes);
 }
 
 initnewa();
