@@ -13,36 +13,38 @@
     <link rel="stylesheet" href="../css/app.css">
 
     <!-- Latest minified bootstrap js -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     
 </head>
 <body>
 <div class="container-fluid">
     <div id="nav-column">
-        <p>Organizar por:</p>
-        <nav>
+        <span>Organizar por:</span>
+        <nav class="bs-component">
             <ul class="nav nav-pills flex-column mb-3">
-                <li class="nav-item"><a class="nav-link button" id="asaderas">Asaderas</a></li>
                 <li class="nav-item"><a class="nav-link button" id="clientes">Clientes</a></li>
+                <li class="nav-item"><a class="nav-link button" id="asaderas">Asaderas</a></li>
                 <li class="nav-item"><a class="nav-link button" id="horno1">Horno 1</a></li>
                 <li class="nav-item"><a class="nav-link button" id="horno2">Horno 2</a></li>
+                <li class="nav-item"><a class="nav-link button" id="entregados">Entregados</a></li>
             </ul>
         </nav>
-        <p>Buscar cliente:</p>
+        <span>Buscar cliente:</span>
         <form class="form-inline" action="">
-            <input class="form-control mr-sm-2 pl-1 ml-1" type="text" placeholder="Nombre del cliente">
-            <button class="btn btn-success btn-sm" type="submit">Buscar</button>
+            <input class="form-control pl-1 pr-1" type="text" placeholder="Nombre del cliente">
+            <button class="btn btn-success btn-sm" type="submit"><img src="../../img/lupa2.png" alt="B" title="Buscar"></button>
         </form>
-        <button type="button" id="addClientButton" class="mr-sm-2" onclick="displayNewClientWindow()">Agregar cliente</button>
-        <button type="button" id="addAsaderaButton" class="mr-sm-2" onclick="displayNewAsaderaWindow()">Agregar asadera</button>
+        <button type="button" id="addClientButton" class="btn btn-primary" onclick="displayNewClientWindow()">Agregar cliente</button>
+        <button type="button" id="addAsaderaButton" class="btn btn-primary" onclick="displayNewAsaderaWindow()">Agregar asadera</button>
+        <button type="button" id="generateReport" class="btn btn-secondary" onclick="generateReport()">Generar reporte</button>
     </div>
     <div id="content">
-        <table id="tableData" class="table table-dark table-hover">
+        <table id="tableData" class="table table-hover">
+            <thead id="theader"></thead>
+            <tbody class="tbody" id="tbody"></tbody>
         </table>
     </div>
 </div>
 <script src="../nav.js"></script>
-<script type="text/javascript" src="../content.js"></script>
 </body>
 </html>
